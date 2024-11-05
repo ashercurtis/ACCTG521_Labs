@@ -146,7 +146,7 @@ JSON_Name7=JSON_Name7
           <Implicit />
         </Dependencies>
       </Properties>
-      <EngineSettings Macro="standardMacroEDGAR.yxmc" />
+      <EngineSettings Macro=".\standardMacroEDGAR.yxmc" />
     </Node>
     <Node ToolID="109">
       <GuiSettings>
@@ -323,7 +323,7 @@ JSON_Name7=JSON_Name7
           <Implicit />
         </Dependencies>
       </Properties>
-      <EngineSettings Macro="C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class11_Macros\standardMacroEDGAR.yxmc" />
+      <EngineSettings Macro=".\standardMacroEDGAR.yxmc" />
     </Node>
     <Node ToolID="118">
       <GuiSettings>
@@ -343,7 +343,7 @@ JSON_Name7=JSON_Name7
           <Implicit />
         </Dependencies>
       </Properties>
-      <EngineSettings Macro="C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class11_Macros\standardMacroEDGAR.yxmc" />
+      <EngineSettings Macro=".\standardMacroEDGAR.yxmc" />
     </Node>
     <Node ToolID="119">
       <GuiSettings>
@@ -366,7 +366,7 @@ JSON_Name7=JSON_Name7
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class11_Macros\standardMacroEDGAR.yxmc" />
+      <EngineSettings Macro=".\standardMacroEDGAR.yxmc" />
     </Node>
     <Node ToolID="120">
       <GuiSettings>
@@ -383,7 +383,7 @@ JSON_Name7=JSON_Name7
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class11_Macros\standardMacroEDGAR.yxmc" />
+      <EngineSettings Macro=".\standardMacroEDGAR.yxmc" />
     </Node>
     <Node ToolID="88">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -1767,7 +1767,7 @@ url = "https://data.sec.gov/submissi...</DefaultAnnotationText>
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>EDGAR_Explorer_3_CompanyFacts_API_standardMacro</Name>
+      <Name>EDGAR_Explorer_3_CompanyFacts_API_standardMacroMultiple</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
@@ -1782,9 +1782,9 @@ url = "https://data.sec.gov/submissi...</DefaultAnnotationText>
         <Description />
         <File />
       </Example>
-      <WorkflowId value="f378b7a1-6159-4e49-b7b2-d946cea70883" />
+      <WorkflowId value="d7d7fcd2-b32e-40ee-9e97-7382f939a8b1" />
       <Telemetry>
-        <PreviousWorkflowId value="6ccff714-4d21-48ee-a8c2-895772856179" />
+        <PreviousWorkflowId value="f378b7a1-6159-4e49-b7b2-d946cea70883" />
         <OriginWorkflowId value="e9893d90-685c-4fe1-b91e-f19f040360c5" />
       </Telemetry>
       <PlatformWorkflowId value="" />

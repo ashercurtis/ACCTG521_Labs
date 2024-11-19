@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="True" FileFormat="0" OutputFileName="Path">prompt1/output_data2.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>output_data2.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="UniqueID" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="LastName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="MiddleInitial" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FirstName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="JobTitle" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Department" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="HireDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="TerminationDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="AnnualSalary" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="66" y="174" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="54" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Control Parameter (4)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="258" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HireDate" action="GroupBy" rename="HireDate" />
+            <SummarizeField field="HireDate" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="HireDate" size="254" source="Summarize: GroupBy - HireDate" type="V_String" />
+            <Field name="Count" source="Summarize: Count - HireDate" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="738" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">output/questions_.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>FileName</MultiFileType>
+          <MultiFileField>Output_File_Name</MultiFileField>
+          <KeepField value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>questions_.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="390" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Count]&gt;1 THEN &quot;True&quot; ELSE &quot;False&quot; ENDIF" field="multiple_hires" size="1" type="Bool" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[multiple_hires = IF [Count]>1 THEN "True" ELSE "False" ENDIF
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="HireDate" size="254" source="Summarize: GroupBy - HireDate" type="V_String" />
+            <Field name="Count" source="Summarize: Count - HireDate" type="Int64" />
+            <Field name="multiple_hires" source="Formula: IF [Count]&gt;1 THEN &quot;True&quot; ELSE &quot;False&quot; ENDIF" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="522" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="HireDate" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="HireDate" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Count" selected="True" rename="count_of_hires" input="Left_" />
+                <SelectField field="Right_HireDate" selected="True" rename="Right_HireDate" input="Right_" />
+                <SelectField field="Left_Hire Date" selected="False" input="Left_" />
+                <SelectField field="Right_Hire Date" selected="True" rename="Right_Hire Date" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="HireDate" size="254" source="Summarize: GroupBy - HireDate" type="V_String" />
+            <Field name="Count" source="Summarize: Count - HireDate" type="Int64" />
+            <Field name="multiple_hires" source="Formula: IF [Count]&gt;1 THEN &quot;True&quot; ELSE &quot;False&quot; ENDIF" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="HireDate" size="254" source="Summarize: GroupBy - HireDate" type="V_String" />
+            <Field name="count_of_hires" source="Summarize: Count - HireDate" type="Int64" />
+            <Field name="multiple_hires" source="Formula: IF [Count]&gt;1 THEN &quot;True&quot; ELSE &quot;False&quot; ENDIF" type="Bool" />
+            <Field name="UniqueID" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="LastName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="MiddleInitial" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FirstName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="JobTitle" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Department" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Right_HireDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="TerminationDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="AnnualSalary" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+            <Field name="Input_File_Name" size="1073741823" source="Formula: REGEX_Replace([FileName], &quot;.*\\&quot;, &quot;&quot;)" type="V_WString" />
+            <Field name="Output_File_Name" size="1073741823" source="Formula: &quot;questions_&quot;+REGEX_Replace(REGEX_Replace([Input_File_Name], &quot;.csv&quot;, &quot;&quot;), &quot;output_&quot;, &quot;&quot;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="UniqueID" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="LastName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="MiddleInitial" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FirstName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="JobTitle" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Department" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="HireDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="TerminationDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="AnnualSalary" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+            <Field name="Input_File_Name" size="1073741823" source="Formula: REGEX_Replace([FileName], &quot;.*\\&quot;, &quot;&quot;)" type="V_WString" />
+            <Field name="Output_File_Name" size="1073741823" source="Formula: &quot;questions_&quot;+REGEX_Replace(REGEX_Replace([Input_File_Name], &quot;.csv&quot;, &quot;&quot;), &quot;output_&quot;, &quot;&quot;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="630" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="HireDate" size="254" source="Summarize: GroupBy - HireDate" type="V_String" />
+            <Field name="count_of_hires" source="Summarize: Count - HireDate" type="Int64" />
+            <Field name="multiple_hires" source="Formula: IF [Count]&gt;1 THEN &quot;True&quot; ELSE &quot;False&quot; ENDIF" type="Bool" />
+            <Field name="UniqueID" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="LastName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="MiddleInitial" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FirstName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="JobTitle" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Department" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Right_HireDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="TerminationDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="AnnualSalary" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+            <Field name="Input_File_Name" size="1073741823" source="Formula: REGEX_Replace([FileName], &quot;.*\\&quot;, &quot;&quot;)" type="V_WString" />
+            <Field name="Output_File_Name" size="1073741823" source="Formula: &quot;questions_&quot;+REGEX_Replace(REGEX_Replace([Input_File_Name], &quot;.csv&quot;, &quot;&quot;), &quot;output_&quot;, &quot;&quot;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="294" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([FileName], &quot;.*\\&quot;, &quot;&quot;)" field="Input_File_Name" size="1073741823" type="V_WString" />
+            <FormulaField expression="&quot;questions_&quot;+REGEX_Replace(REGEX_Replace([Input_File_Name], &quot;.csv&quot;, &quot;&quot;), &quot;output_&quot;, &quot;&quot;)" field="Output_File_Name" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input_File_Name = REGEX_Replace([FileName], ".*\\", "")
+Output_File_Name = "ques...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="UniqueID" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="LastName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="MiddleInitial" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FirstName" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="JobTitle" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="Department" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="HireDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="TerminationDate" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="AnnualSalary" size="254" source="File: C:\Users\abcurtis\OneDrive - UW\__Teaching__\GitHubConnections\ACCTG521_Labs\Class17_GenAITests\prompt1\output_data2.csv" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+            <Field name="Input_File_Name" size="1073741823" source="Formula: REGEX_Replace([FileName], &quot;.*\\&quot;, &quot;&quot;)" type="V_WString" />
+            <Field name="Output_File_Name" size="1073741823" source="Formula: &quot;questions_&quot;+REGEX_Replace(REGEX_Replace([Input_File_Name], &quot;.csv&quot;, &quot;&quot;), &quot;output_&quot;, &quot;&quot;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="3" Connection="Action" />
+      <Destination ToolID="2" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="4" Connection="Question" />
+      <Destination ToolID="3" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="16" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Join" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Control Parameter (4)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>C17_batchMacro</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="35f95a99-0dd9-4fd8-b158-009786ba50e8" />
+      <Telemetry>
+        <PreviousWorkflowId value="ceb564ec-4919-4c95-a25a-3457965529f5" />
+        <OriginWorkflowId value="ceb564ec-4919-4c95-a25a-3457965529f5" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="3" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>prompt1/output_data2.csv</ReplaceText>
+              <Destination>2/File</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (1)</Name>
+          <ToolId value="1" />
+          <Questions>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>FilePath</Description>
+              <Name>Control Parameter (4)</Name>
+              <ToolId value="4" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AllSame</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>Control Parameter (4)</Name>
+            <Description>FilePath</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="8" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

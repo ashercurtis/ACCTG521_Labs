@@ -21,7 +21,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="138" y="54" />
+        <Position x="186" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -42,7 +42,7 @@
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="234" y="54" />
+        <Position x="318" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -59,9 +59,9 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="8">
+    <Node ToolID="11">
       <GuiSettings>
-        <Position x="330" y="54" />
+        <Position x="438" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -88,7 +88,7 @@
     </Connection>
     <Connection>
       <Origin ToolID="5" Connection="Output" />
-      <Destination ToolID="8" Connection="Control" />
+      <Destination ToolID="11" Connection="Control" />
     </Connection>
   </Connections>
   <Properties>
